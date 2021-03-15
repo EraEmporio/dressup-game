@@ -47,7 +47,7 @@
 .main-character, .btn-escolhe, .title-image, 
 .arrow-left, .arrow-right, .janela-calca, 
 .janela-camisa, .janela-acessorio, .janela-chapeu,
-.janela-calcado, .btn-voltar, .btn-salvar {
+.janela-calcado {
     
     background-position: center center;
     background-repeat: no-repeat;
@@ -125,21 +125,69 @@
 }
 
 .btn-voltar {
-    background-image:url(tela2/voltar.png);
+    /* background-image:url(tela2/voltar.png);
     height: 30px;
-    background-position: center left;
+    background-position: center left; */
     cursor: pointer;
+    width: 100px;
 } 
 
 .btn-salvar {
-    background-image:url(tela2/salvar.png);
-    height: 50px;
-    cursor: pointer;
+    /* background-image:url(tela2/salvar.png);
+    height: 50px;*/
+    cursor: pointer; 
+    width: 175px;
 }
 
 .back-save {
     padding-left: 50px !important;
 }
+
+
+
+
+#camisa-on, #calca-on, #chapeu-on, #calcado-on,
+#acessorio-on, .calca, .camisa, .galeria-homem,
+.galeria-mulher, .acessorio, .chapeu, .calcado {
+    position: absolute;
+}
+
+#calca-on {
+    bottom: -22px;
+    left: 26px;
+}
+
+#camisa-on {
+    top: 10px;
+    left: 24px;
+}
+
+#calcado-on {
+    bottom: -58px;
+    left: 25px;
+}
+
+#chapeu-on {
+    top: -29px;
+    left: 24px;
+}
+
+#calca-box, #camisa-box, #acessorios-box,
+#chapeu-box, #calcado-box {
+    width: 190px;
+}
+
+#char {
+    width: 240px;
+}
+
+.calca, .camisa, .acessorio, .chapeu, 
+.calcado {
+    right: 0;
+    top: 0;
+}
+
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) { 
 
