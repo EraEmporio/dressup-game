@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>Dress Up</title>
+</head>
+<body>
+    <!-- <div id="overlay">    </div>  -->
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">DressUp Game</h5>
+                </div> -->
+                <div class="modal-body">
+                    <!-- <div id='tela01' class="row justify-content-center m-2">
+                        <div class="col-log-12 mt-3 title-image"></div>
+                        <div class="col-lg-8" style="align-items: center; display: flex;">
+                            <div class="arrow arrow-left"></div>
+                            <div class="main-character"></div>
+                            <div class="arrow arrow-right"></div>
+                        </div>
+                        <div id='escolhe-char' class="col-log-12 mt-3 btn-escolhe"></div>
+                    </div> -->
+
+                    <div id='tela02' class="row justify-content-center m-2">
+                        <div class="col-log-12 mt-3 title-image"></div>
+                        <!-- <div class="col-log-12 mt-3 title-image"></div>
+                        <div class="col-lg-8" style="align-items: center; display: flex;">
+                            <div class="arrow arrow-left"></div>
+                            <div class="main-character"></div>
+                            <div class="arrow arrow-right"></div>
+                        </div>
+                        <div id='escolhe-char' class="col-log-12 mt-3 btn-escolhe"></div> -->
+                        <div class="col-lg-8 mt-3">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4">
+                                    <div class="janela-g janela-camisa"></div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="janela-g janela-calca"></div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="janela-g janela-acessorio"></div>
+                                </div>
+                            </div>       
+                            <div class="row justify-content-center mt-4">
+                                <div class="col-lg-4">
+                                    <div class="janela-p janela-chapeu"></div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="janela-p janela-calcado"></div>
+                                </div>
+                            </div>               
+                        </div>
+                        <div class="col-lg-4 mt-3">
+                            <div class="main-character"></div>
+                        </div>
+                        <div class="row justify-content-center back-save">
+                            <div class="col-lg-8 mt-4 btn-voltar"></div>
+                            <div class="col-lg-4 mt-4 btn-salvar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script>
+        
+        let i = 0, char_escolhido = ""
+        let images = ['tela01_homem-01.png', 'tela01_homem-02.png',
+                        'tela01_mulher-01.png', 'tela01_mulher-02.png']
+
+        $('.arrow').click(function() {
+            
+            if($(this).hasClass('arrow-left')) {
+                (i == 0) ? i = images.length - 1 : i--
+                
+            }else {
+                (i == images.length - 1) ? i = 0 : i++
+            }
+            $(".main-character").css("background-image", "url(" +"tela1/galeria/"+ images[i] + ")");            
+        });
+
+        $('#escolhe-char').click(function() {
+            char_escolhido = images[i];
+            $('#tela01').hide();
+            $('#tela02').show();
+        });
+
+        $(document).ready(function(){
+            $('#exampleModal').modal('show')
+            // $('#tela02').hide();
+        });
+
+
+    </script>
+</body>
+</html>
