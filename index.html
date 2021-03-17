@@ -5,271 +5,299 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <title>Dress Up</title>
 </head>
 <body>
-    <!-- <div id="overlay">    </div>  -->
+<!-- <div id="overlay">    </div>  -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div id='tela01' class="row justify-content-center m-2">
-                        <div class="col-log-12 mt-3 title-image"></div>
-                        <div class="col-lg-8" style="align-items: center; display: flex;">
-                            <div class="arrow arrow-left"></div>
-                            <div class="main-character"></div>
-                            <div class="arrow arrow-right"></div>
-                        </div>
-                        <div id='escolhe-char' class="col-log-12 mt-3 btn-escolhe"></div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+     aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id='tela01' class="row justify-content-center m-2">
+                    <div class="col-log-12 mt-3 title-image"></div>
+                    <div class="col-lg-8" style="align-items: center; display: flex;">
+                        <div class="arrow arrow-left"></div>
+                        <div class="main-character"></div>
+                        <div class="arrow arrow-right"></div>
                     </div>
+                    <div id='escolhe-char' class="col-log-12 mt-3 btn-escolhe"></div>
+                </div>
 
-                    <div id='tela02' class="row justify-content-center m-2">
-                        <div class="col-log-12 mt-3 title-image"></div>
-                        <div class="col-lg-8 mt-3">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-4 d-flex justify-content-center">
-                                    <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
-                                        <img class='seta seta-esquerda seta-camisa' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='camisa-box' src="tela2/janela-camisa.png" alt="">
-                                        <img class='seta seta-direita seta-camisa' src="tela2/seta-direita.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-astronauta.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-bombeiro.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-gario.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-mergulhador.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-cozinheiro.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-jardineiro.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-pescador.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-professor.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/homem/camisa/camisa-violeiro.png" alt="">
-                                    </div>
-                                    <div class="galeria-mulher d-none" style="padding-left: 15px;">
-                                        <img class='seta seta-esquerda seta-camisa' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='camisa-box' src="tela2/janela-camisa.png" alt="">
-                                        <img class='seta seta-direita seta-camisa' src="tela2/seta-direita.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-astronauta.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-bombeira.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-gari.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-jardineira.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-medica.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-mergulhadora.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-musica.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-pescadora.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-professora.png" alt="">
-                                        <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-cozinheira.png" alt="">
-                                    </div>
+                <div id='tela02' class="row justify-content-center m-2">
+                    <div class="col-log-12 mt-3 title-image"></div>
+                    <div class="col-lg-8 mt-3">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
+                                    <img class='seta seta-esquerda seta-camisa' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='camisa-box' src="tela2/janela-camisa.png" alt="">
+                                    <svg class='select select-camisa' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-camisa' src="tela2/seta-direita.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-bombeiro.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-gario.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-mergulhador.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-cozinheiro.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-pescador.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-professor.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/homem/camisa/camisa-violeiro.png" alt="">
                                 </div>
-                                <div class="col-lg-4 d-flex justify-content-center">
-                                    <!-- <img class="calca-box" src="tela2/janela-calca.png" alt=""> -->
-                                    <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
-                                        <img class='seta seta-esquerda seta-calca' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='calca-box' src="tela2/janela-calca.png" alt="">
-                                        <img class='seta seta-direita seta-calca' src="tela2/seta-direita.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-astronauta.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-bombeiro.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-gario.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-mergulhador.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-cozinheiro.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-jardineiro.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-pescador.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-professor.png" alt="">
-                                        <img class="calca" src="tela2/galerias/homem/calca/calca-violeiro.png" alt="">
-                                    </div>
-                                    <div class="galeria-mulher d-none" style="padding-left: 15px;">
-                                        <img class='seta seta-esquerda seta-calca' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='calca-box' src="tela2/janela-calca.png" alt="">
-                                        <img class='seta seta-direita seta-calca' src="tela2/seta-direita.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-astronauta.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-bombeira.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-gari.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-jardineira.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-medica.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-mergulhadora.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-musica.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-pescadora.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-professora.png" alt="">
-                                        <img class="calca" src="tela2/galerias/mulher/calcas/calca-cozinheira.png" alt="">
-                                    </div>
+                                <div class="galeria-mulher d-none" style="padding-left: 15px;">
+                                    <img class='seta seta-esquerda seta-camisa' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='camisa-box' src="tela2/janela-camisa.png" alt="">
+                                    <svg class='select select-camisa' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-camisa' src="tela2/seta-direita.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-astronauta.png"
+                                         style="z-index: 1" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-bombeira.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-gari.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-medica.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-mergulhadora.png"
+                                         alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-musica.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-pescadora.png" alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-professora.png"
+                                         alt="">
+                                    <img class="camisa" src="tela2/galerias/mulher/camisas/camisa-cozinheira.png"
+                                         alt="">
                                 </div>
-                                <div class="col-lg-4 d-flex justify-content-center">
-                                    <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
-                                        <img class='seta seta-esquerda seta-acessorio' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='acessorios-box' src="tela2/janela-acessorios.png" alt="">
-                                        <img class='seta seta-direita seta-acessorio' src="tela2/seta-direita.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-astronauta.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-bombeiro.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-gario.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-mergulhador.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-cozinheiro.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-jardineiro.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-pescador.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-professor.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-violeiro.png" alt="">
-                                    </div>
-                                    <div class="galeria-mulher d-none" style="padding-left: 15px;">
-                                        <img class='seta seta-esquerda seta-acessorio' src="tela2/seta-esquerda.png" alt="">
-                                        <img id='acessorios-box' src="tela2/janela-acessorios.png" alt="">
-                                        <img class='seta seta-direita seta-acessorio' src="tela2/seta-direita.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-astronauta.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-bombeira.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-gari.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-jardineira.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-medica.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-mergulhadora.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-musica.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-pescadora.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-professora.png" alt="">
-                                        <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-cozinheira.png" alt="">
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <!-- <img class="calca-box" src="tela2/janela-calca.png" alt=""> -->
+                                <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
+                                    <img class='seta seta-esquerda seta-calca' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='calca-box' src="tela2/janela-calca.png" alt="">
+                                    <!--                                        <div class="select"></div>-->
+                                    <svg class='select ' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-calca' src="tela2/seta-direita.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-bombeiro.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-gario.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-mergulhador.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-cozinheiro.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-jardineiro.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-pescador.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-professor.png" alt="">
+                                    <img class="calca" src="tela2/galerias/homem/calca/calca-violeiro.png" alt="">
                                 </div>
-                            </div>       
-                            <div class="row justify-content-center mt-4">
-                                <div class="col-lg-4 d-flex justify-content-center">
-                                    <div class="galeria-homem" style="padding-left: 15px;bottom: 190px;">
-                                        <img class='seta seta-esquerda seta-chapeu' src="tela2/seta-esquerda.png" style="bottom: 30px;" alt="">
-                                        <img id='chapeu-box' src="tela2/janela-chapeu.png" alt="">
-                                        <img class='seta seta-direita seta-chapeu' src="tela2/seta-direita.png" style="bottom: 30px;right: 2px;" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-astronauta.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-bombeiro.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-gario.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-jardineiro.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-pescador.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-cozinheiro.png" alt="">
-                                    </div>
-                                    <div class="galeria-mulher d-none" style="padding-left: 15px;bottom: 190px;">
-                                        <img class='seta seta-esquerda seta-chapeu' src="tela2/seta-esquerda.png" style="bottom: 30px;" alt="">
-                                        <img id='chapeu-box' src="tela2/janela-chapeu.png" alt="">
-                                        <img class='sseta eta-direita seta-chapeu' src="tela2/seta-direita.png" style="bottom: 30px;right: 2px;" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-astronauta.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-bombeira.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-gari.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-jardineira.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-pescadora.png" alt="">
-                                        <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-cozinheira.png" alt="">
-                                    </div>
+                                <div class="galeria-mulher d-none" style="padding-left: 15px;">
+                                    <img class='seta seta-esquerda seta-calca' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='calca-box' src="tela2/janela-calca.png" alt="">
+                                    <svg class='select' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-calca' src="tela2/seta-direita.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-bombeira.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-gari.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-jardineira.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-medica.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-mergulhadora.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-musica.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-pescadora.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-professora.png" alt="">
+                                    <img class="calca" src="tela2/galerias/mulher/calcas/calca-cozinheira.png" alt="">
                                 </div>
-                                <div class="col-lg-4 d-flex justify-content-center">
-                                    <div class="galeria-homem" style="padding-left: 15px;bottom: 190px;">
-                                        <img class='seta seta-esquerda seta-calcado' src="tela2/seta-esquerda.png" style="bottom: 30px;" alt="">
-                                        <img id='calcado-box' src="tela2/janela-calcado.png" alt="">
-                                        <img class='seta seta-direita seta-calcado' src="tela2/seta-direita.png" style="bottom: 30px;right: 2px;" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-astronauta.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-bombeiro.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-gario.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-mergulhador.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-cozinheiro.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-jardineiro.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-pescador.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-professor.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/homem/sapato/sapato-violeiro.png" alt="">
-                                    </div>
-                                    <div class="galeria-mulher d-none" style="padding-left: 15px; bottom: 190px;">
-                                        <img class='seta seta-esquerda seta-calcado' src="tela2/seta-esquerda.png" style="bottom: 30px;" alt="">
-                                        <img id='calcado-box' src="tela2/janela-calcado.png" alt="">
-                                        <img class='seta seta-direita seta-calcado' src="tela2/seta-direita.png" style="bottom: 30px;right: 2px;" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-astronauta.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-bombeira.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-gari.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-jardineira.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-medica.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-mergulhadora.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-musica.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-pescadora.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-professora.png" alt="">
-                                        <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-cozinheira.png" alt="">
-                                    </div>
+                            </div>
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="galeria-homem" style="padding-left: 15px;position: absolute;">
+                                    <img class='seta seta-esquerda seta-acessorio' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='acessorios-box' src="tela2/janela-acessorios.png" alt="">
+                                    <svg class='select' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="4,23 140,20 160,224 0,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-acessorio' src="tela2/seta-direita.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/homem/acessorios/acessorios-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-bombeiro.png"
+                                         alt="">
+                                    <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-gario.png"
+                                         alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/homem/acessorios/acessorios-mergulhador.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/homem/acessorios/acessorios-cozinheiro.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/homem/acessorios/acessorios-jardineiro.png" alt="">
+                                    <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-pescador.png"
+                                         alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/homem/acessorios/acessorios-professor.png" alt="">
+                                    <img class="acessorio" src="tela2/galerias/homem/acessorios/acessorios-violeiro.png"
+                                         alt="">
                                 </div>
-                            </div>               
-                        </div>
-                        <div class="col-lg-4 mt-3 d-flex justify-content-center">
-                            <!-- <div class="main-character"></div> -->
-                            <!-- <div class="camisa"></div> -->
-                            <!-- <div class="calça"></div> -->
-
-                            
-                            <div class="main-char-area" style="position:absolute">
-                                <img id="calca-on" src="tela2/principal/homem/calca/calca-astronauto.png" alt="">
-                                <img id="camisa-on" src="tela2/principal/homem/camisa/camisa-astronauto.png" alt="">
-                                <img id="calcado-on" src="tela2/principal/homem/sapato/sapato-astronauto.png" alt="">
-                                <img id="chapeu-on" src="tela2/principal/homem/chapeu/chapeu-astronauto.png" alt="">
-
-                                <img id="acessorio-on" src="tela2/principal/homem/acessorios/acessorios-astronauto.png" alt="">
-                                <img id="char" src="tela1/galeria/tela01_homem-01.png" alt="">
+                                <div class="galeria-mulher d-none" style="padding-left: 15px;">
+                                    <img class='seta seta-esquerda seta-acessorio' src="tela2/seta-esquerda.png" alt="">
+                                    <img id='acessorios-box' src="tela2/janela-acessorios.png" alt="">
+                                    <svg class='select' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="4,23 140,20 160,224 0,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-acessorio' src="tela2/seta-direita.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-bombeira.png" alt="">
+                                    <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-gari.png"
+                                         alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-jardineira.png" alt="">
+                                    <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-medica.png"
+                                         alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-mergulhadora.png" alt="">
+                                    <img class="acessorio" src="tela2/galerias/mulher/acessorios/acessorios-musica.png"
+                                         alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-pescadora.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-professora.png" alt="">
+                                    <img class="acessorio"
+                                         src="tela2/galerias/mulher/acessorios/acessorios-cozinheira.png" alt="">
+                                </div>
                             </div>
                         </div>
-                        <div class="row justify-content-center mt-3 back-save" style="position: absolute;bottom: 53px;left: 0px;">
-                            <div class="col-lg-8">
-                                <img class='btn-voltar' src="tela2/voltar.png" alt="">
+                        <div class="row justify-content-center mt-4">
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="galeria-homem" style="padding-left: 15px;bottom: 190px;">
+                                    <img class='seta seta-esquerda seta-chapeu' src="tela2/seta-esquerda.png"
+                                         style="bottom: 30px;" alt="">
+                                    <img id='chapeu-box' src="tela2/janela-chapeu.png" alt="">
+                                    <svg class='select' height="55" width="200" style="bottom: 16px;left: 40px;">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-chapeu' src="tela2/seta-direita.png"
+                                         style="bottom: 30px;right: 2px;" alt="">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-bombeiro.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-gario.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-jardineiro.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-pescador.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/homem/chapeu/chapeu-cozinheiro.png" alt="">
+                                </div>
+                                <div class="galeria-mulher d-none" style="padding-left: 15px;bottom: 190px;">
+                                    <img class='seta seta-esquerda seta-chapeu' src="tela2/seta-esquerda.png"
+                                         style="bottom: 30px;" alt="">
+                                    <img id='chapeu-box' src="tela2/janela-chapeu.png" alt="">
+                                    <svg class='select' height="55" width="200" style="bottom: 16px;left: 40px;">
+                                        <polygon style="fill:transparent;" points="1,18 145,22 125,90 19,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-chapeu' src="tela2/seta-direita.png"
+                                         style="bottom: 30px;right: 2px;" alt="">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-bombeira.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-gari.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-jardineira.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-pescadora.png" alt="">
+                                    <img class="chapeu" src="tela2/galerias/mulher/chapeu/chapeu-cozinheira.png" alt="">
+                                </div>
                             </div>
-                            <div class="col-lg-4 text-center">
-                                <img class='btn-salvar' src="tela2/salvar.png" alt="">
+                            <div class="col-lg-4 d-flex justify-content-center">
+                                <div class="galeria-homem" style="padding-left: 15px;bottom: 190px;">
+                                    <img class='seta seta-esquerda seta-calcado' src="tela2/seta-esquerda.png"
+                                         style="bottom: 30px;" alt="">
+                                    <img id='calcado-box' src="tela2/janela-calcado.png" alt="">
+                                    <svg class='select' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="4,23 140,16 160,224 0,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-calcado' src="tela2/seta-direita.png"
+                                         style="bottom: 30px;right: 2px;" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-astronauta.png" alt=""
+                                         style="z-index: 1">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-bombeiro.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-gario.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-mergulhador.png"
+                                         alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-cozinheiro.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-jardineiro.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-professor.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/homem/sapato/sapato-violeiro.png" alt="">
+                                </div>
+                                <div class="galeria-mulher d-none" style="padding-left: 15px; bottom: 190px;">
+                                    <img class='seta seta-esquerda seta-calcado' src="tela2/seta-esquerda.png"
+                                         style="bottom: 30px;" alt="">
+                                    <img id='calcado-box' src="tela2/janela-calcado.png" alt="">
+                                    <svg class='select' height="55" width="200">
+                                        <polygon style="fill:transparent;" points="4,23 140,16 160,224 0,100"></polygon>
+                                    </svg>
+                                    <img class='seta seta-direita seta-calcado' src="tela2/seta-direita.png"
+                                         style="bottom: 30px;right: 2px;" alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-astronauta.png"
+                                         alt="" style="z-index: 1">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-bombeira.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-gari.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-jardineira.png"
+                                         alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-medica.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-mergulhadora.png"
+                                         alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-musica.png" alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-pescadora.png"
+                                         alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-professora.png"
+                                         alt="">
+                                    <img class="calcado" src="tela2/galerias/mulher/sapatos/sapato-cozinheira.png"
+                                         alt="">
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-3 d-flex justify-content-center">
+                        <!-- <div class="main-character"></div> -->
+                        <!-- <div class="camisa"></div> -->
+                        <!-- <div class="calça"></div> -->
+
+
+                        <div class="main-char-area" style="position:absolute">
+                            <img id="calca-on" src="" alt="" style="z-index: 1">
+                            <img id="camisa-on" src="" alt="" style="z-index: 2">
+                            <img id="calcado-on" src="" alt="">
+                            <img id="chapeu-on" src="" alt="">
+                            <img id="acessorio-on" src="" alt="">
+                            <img id="char" src="tela1/galeria/tela01_homem-01.png" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3 back-save"
+                         style="position: absolute;bottom: 53px;left: 0px;">
+                        <div class="col-lg-8">
+                            <img class='btn-voltar' src="tela2/voltar.png" alt="">
+                        </div>
+                        <div class="col-lg-4 text-center">
+                            <img class='btn-salvar' src="tela2/salvar.png" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+<script src="game.js"></script>
+<script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <script>
-        
-        let i = 0, char_escolhido = "", galeria = ""
-        let images = ['tela01_homem-01.png', 'tela01_homem-02.png',
-                        'tela01_mulher-01.png', 'tela01_mulher-02.png']
 
-        $('.arrow').click(function() {
-            
-            if($(this).hasClass('arrow-left')) {
-                (i == 0) ? i = images.length - 1 : i--
-                
-            }else {
-                (i == images.length - 1) ? i = 0 : i++
-            }
-            $(".main-character").css("background-image", "url(" +"tela1/galeria/"+ images[i] + ")");            
-            
-        });
 
-        let k = 0
-        $('.seta').click(function() {
-            let class_list = $(this).attr('class').split(/\s+/),
-            galeria_to_change = class_list[2].split('seta-').join('')
-            
-            let objetos = $('.' + galeria + ' .' + galeria_to_change)
-            if($(this).hasClass('seta-esquerda')) {
-                console.log('seta esquerda')
-                $(objetos[k]).css('z-index', 0)
-                k--
-                if(k < 0) k = objetos.length - 1
-                $(objetos[k]).css('z-index', 1)
-            }else {
-                console.log('seta direita')
-                $(objetos[k]).css('z-index', 0)
-                k++
-                if(k > objetos.length - 1) k = 0
-                $(objetos[k]).css('z-index', 1)
-            }
-        });
-
-        $('#escolhe-char').click(function() {
-            let img_tela2 = ['tela02_homem-01.png', 'tela02_homem-02.png',
-                        'tela02_mulher-01.png', 'tela02_mulher-02.png']
-
-            char_escolhido = img_tela2[i];
-            (char_escolhido.includes('mulher')) ? galeria = 'galeria-mulher' : galeria = 'galeria-homem'
-
-            $("#char").attr("src", "tela2/principal/"+ char_escolhido);
-            $('#tela01').hide();
-            $('#tela02').show();
-        });
-
-        $(document).ready(function(){
-            $('#exampleModal').modal('show')
-            $('#tela02').hide();
-        });
-        
-    </script>
+</script>
 </body>
 </html>
