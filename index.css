@@ -153,23 +153,27 @@
 }
 
 #calca-on {
-    bottom: -22px;
-    left: 26px;
+    bottom: -40px;
+    left: 0px;
 }
 
 #camisa-on {
-    top: 10px;
-    left: 24px;
+    left: 0;
+    bottom: -35px;
 }
 
 #calcado-on {
-    bottom: -58px;
-    left: 25px;
+    bottom: -34px;
+    left: 0px;
 }
 
 #chapeu-on {
-    top: -29px;
-    left: 24px;
+    top: -36px;
+    left: 0px;
+}
+
+#acessorio-on {
+    bottom: -35px;
 }
 
 #calca-box, #camisa-box, #acessorios-box,
@@ -177,9 +181,21 @@
     width: 190px;
 }
 
-#char {
-    width: 240px;
+.seta-esquerda, .seta-direita {
+    width: 15px;
+    position: absolute;
+    bottom: 100px;
+    cursor: pointer;
+    z-index: 1;
 }
+
+.seta-direita {
+    right: 5px;
+}
+
+/* #char {
+    width: 240px;
+} */
 
 .calca, .camisa, .acessorio, .chapeu, 
 .calcado {
