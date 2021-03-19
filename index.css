@@ -150,33 +150,71 @@
     position: absolute;
 }
 
-#calca-on {
+/* galeria mulher positions */
+
+.gmulher-active #calca-on {
+    bottom: -26px ;
+    left: 0px ;
+    z-index: 1;
+}
+
+
+.gmulher-active #calca-on.calca-astro {
+    bottom: -4px !important;
+    left: -2px !important;
+}
+
+.gmulher-active #camisa-on {
+    left: 0px !important;
+    bottom: -28px;
+}
+
+.gmulher-active #calcado-on {
+    bottom: -29px !important;
+    left: 0;
+}
+
+.gmulher-active #chapeu-on {
+    top: -46px !important;
+    left: 0px;
+}
+
+.gmulher-active #acessorio-on {
+    bottom: -28px;
+    z-index: 2;
+}
+
+/* galeria homem positions */
+.ghomem-active #calca-on {
     bottom: -40px;
     left: 0px;
     z-index: 1;
 }
 
-#camisa-on {
+.ghomem-active #camisa-on {
     left: 0;
     bottom: -40px;
 }
 
-#calcado-on {
+.ghomem-active #calcado-on {
     bottom: -38px;
     left: 0;
     z-index: 0
 }
 
-#chapeu-on {
+.ghomem-active #chapeu-on {
     top: -36px;
     left: 0px;
-
+    z-index: 3;
 }
 
-#acessorio-on {
+.ghomem-active #acessorio-on {
     bottom: -38px;
     z-index: 2;
 }
+
+
+
 
 #calca-box, #camisa-box, #acessorios-box,
 #chapeu-box, #calcado-box {
@@ -210,6 +248,7 @@
     width: 240px;
 } */
 
+
 .calca, .camisa, .acessorio, .chapeu,
 .calcado {
     right: 0;
@@ -219,7 +258,34 @@
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    .back-save {
+        bottom: 665px !important;
+    }
 
+    .galeria-acessorio {
+        bottom: 195px !important;
+        left: 8px !important;
+        right: unset !important;
+    }
+
+    .galeria-calca, .galeria-camisa {
+        bottom: 445px !important;
+    }
+
+    .galeria-calca {
+        right: 17px;
+    }
+
+    .galeria-calcado {
+        bottom: 308px !important;
+        right: 21px !important;
+    }
+
+    .galeria-chapeu {
+        bottom: 174px !important;
+        right: 21px !important;
+        left: unset !important;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -237,7 +303,7 @@
 
     #calca-box, #camisa-box, #chapeu-box,
     #acessorios-box, #calcado-box {
-        width: 150px ;
+        width: 150px;
     }
 
     .galeria-calcado, .galeria-chapeu {
@@ -260,6 +326,7 @@
     .galeria-calca {
         padding-left: 0px;
     }
+
     .galeria-acessorio {
         right: 20px;
     }
@@ -291,16 +358,28 @@
         top: 140px;
     }
 
-    .col-lg-8 .btn-voltar {
+    .back-save .col-lg-8 .btn-voltar {
         display: none;
     }
 
     .back-save {
-        bottom: 570px !important;
+        bottom: 570px;
     }
 
     #tela02 .title-image {
         margin-top: 30px !important;
+    }
+
+    .back-save-mobile {
+        position: absolute;
+        /*left: -22px;*/
+        bottom: 100px !important;
+        text-align: center;
+    }
+
+    .select {
+        bottom: 6px;
+        left: 30px;
     }
 }
 
@@ -350,6 +429,14 @@
     .galeria-calcado {
         margin-left: 10px;
     }
+
+    .back-save-mobile {
+        display: none !important;
+    }
+
+    .back-save {
+        bottom: 53px;
+    }
 }
 
 /* // Large devices (desktops, less than 1200px) */
@@ -357,12 +444,12 @@
     /* #exampleModal .modal-body {
         height: 760px;
     } */
-
     #calca-box, #camisa-box, #acessorios-box,
     #chapeu-box, #calcado-box {
         width: 190px;
         cursor: pointer;
     }
+
     .calca, .camisa, .acessorio, .chapeu,
     .calcado {
         right: 0;
@@ -370,6 +457,9 @@
         width: auto;
     }
 
+    .back-save {
+        bottom: 53px;
+    }
 }
 
 /* // X-Large devices (large desktops, less than 1400px) */

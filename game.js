@@ -26,21 +26,16 @@ $('.seta').click(function () {
         box = class_list[2].split('seta-').join('')
 
     let objetos = $('.' + galeria + ' .' + box)
-
     if ($(this).hasClass('seta-esquerda')) {
-        console.log('seta esquerda')
         $(objetos[j[box]]).css('z-index', 0)
         j[box] -= 1
         if (j[box] < 0) j[box] = objetos.length - 1
         $(objetos[j[box]]).css('z-index', 1)
-        console.log(j[box])
     } else {
-        console.log('seta direita')
         $(objetos[j[box]]).css('z-index', 0)
         j[box] += 1
         if (j[box] > objetos.length - 1) j[box] = 0
         $(objetos[j[box]]).css('z-index', 1)
-        console.log(j[box])
     }
 });
 
@@ -53,9 +48,24 @@ $('#escolhe-char').click(function () {
 
     $("#char").attr("src", "tela2/principal/" + char_escolhido);
     $('#tela01').hide();
+    if (galeria === 'galeria-mulher') {
+        $('.main-char-area').addClass('gmulher-active')
+        $('.galeria-mulher').removeClass('d-none')
+        $('.galeria-homem').addClass('d-none')
+    } else {
+        $('.main-char-area').addClass('ghomem-active')
+    }
+
     $('#tela02').show();
     if (window.innerWidth < 991.98) {
-        $('#exampleModal .modal-body').css('height', 1300)
+        let select = $('.select')
+        let modal_height = 1300
+        if (window.innerWidth < 576.98) {
+            modal_height = 1400
+        }
+        $('#exampleModal .modal-body').css('height', modal_height)
+        select.attr("height", 50)
+        select.attr("width", 120)
     }
 });
 
@@ -68,13 +78,15 @@ $('.select').click(function () {
 
     let main_char = $('#' + box + '-on'),
         calcado_on = $('#calcado-on'),
-        camisa =  $('#camisa-on'),
+        camisa = $('#camisas-on'),
         source_img = $(objetos[j[box]]).attr('src')
 
-    let sapato_astro = source_img.includes('sapato-astronauta'),
-        sapato_bomb = source_img.includes('sapato-bombeiro'),
-        calca_jard_on = $('#calca-on').attr('src').includes('calca-jardineiro'),
-        calca_jard = source_img.includes('calca-jardineiro')
+    let calca_el = $('#calca-on').attr('src')
+    let sapato_astro = source_img.includes('sapatos-astronauta'),
+        calca_astro = calca_el.includes('calca-astronauta') && galeria === 'galeria-mulher',
+        sapato_bomb = source_img.includes('sapatos-bombeiro') || source_img.includes('sapatos-bombeira'),
+        calca_jard_on = calca_el.includes('calca-jardineiro') || calca_el.includes('calca-jardineira'),
+        calca_jard = source_img.includes('calca-jardineiro') || source_img.includes('calca-jardineira')
 
     if (box === 'calcado' && sapato_bomb || sapato_astro) {
         let z_index = 0
@@ -89,8 +101,17 @@ $('.select').click(function () {
     }
 
     if (calca_jard) {
-       camisa.attr('src', ' ')
+        camisa.attr('src', ' ')
     }
+
+    if (calca_astro && !source_img.includes('calca-astronauta') && box === 'calca') {
+        $('.gmulher-active #calca-on').removeClass('calca-astro')
+    } else if (calca_astro || source_img.includes('calca-astronauta')) {
+        $('.gmulher-active #calca-on').addClass('calca-astro')
+    } else {
+        $('.gmulher-active #calca-on').removeClass('calca-astro')
+    }
+
 
     if (!(box === 'camisa' && calca_jard_on)) {
         main_char.attr(
