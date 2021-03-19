@@ -7,23 +7,23 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
-  }
+}
 
-  #text{
+#text {
     position: absolute;
     top: 50%;
     left: 50%;
     font-size: 50px;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-  }
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
 
 
- #exampleModal .modal-header {
+#exampleModal .modal-header {
     border-bottom: none;
 }
 
@@ -34,7 +34,7 @@
 
 
 #exampleModal .modal-body {
-    background-image:url(tela1/tela01_fundo-base.png);    
+    background-image: url(tela1/tela01_fundo-base.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
@@ -43,12 +43,11 @@
 }
 
 
-
-.main-character, .btn-escolhe, .title-image, 
-.arrow-left, .arrow-right, .janela-calca, 
+.main-character, .btn-escolhe, .title-image,
+.arrow-left, .arrow-right, .janela-calca,
 .janela-camisa, .janela-acessorio, .janela-chapeu,
 .janela-calcado {
-    
+
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -57,38 +56,38 @@
 
 
 .main-character {
-    background-image:url(tela1/galeria/tela01_homem-01.png);    
-    height: 450px;    
+    background-image: url(tela1/galeria/tela01_homem-01.png);
+    height: 450px;
     width: 100%;
 }
 
 .title-image {
-    background-image:url(tela1/tela01_sala-das-profissoes.png);    
+    background-image: url(tela1/tela01_sala-das-profissoes.png);
     /* background-size: auto; */
-    height:100px;
+    height: 100px;
     /* width:100%; */
 }
 
 .btn-escolhe {
-    background-image:url(tela1/tela01_escolher-personagem.png);    
-    height: 100px;  
+    background-image: url(tela1/tela01_escolher-personagem.png);
+    height: 100px;
     cursor: pointer;
 }
 
 .arrow-left {
-    background-image:url(tela1/tela01_seta-esquerda.png);    
+    background-image: url(tela1/tela01_seta-esquerda.png);
     background-position: center;
     cursor: pointer;
-    height:50px;
+    height: 50px;
     width: 100%;
 }
 
 
 .arrow-right {
-    background-image:url(tela1/tela01_seta-direita.png);    
+    background-image: url(tela1/tela01_seta-direita.png);
     background-position: center;
     cursor: pointer;
-    height:50px;
+    height: 50px;
     width: 100%;
 }
 
@@ -106,22 +105,23 @@
 }
 
 .janela-calca {
-    background-image:url(tela2/janela-calca.png);    
+    background-image: url(tela2/janela-calca.png);
 }
 
 .janela-camisa {
-    background-image:url(tela2/janela-camisa.png);
-} 
+    background-image: url(tela2/janela-camisa.png);
+}
 
 .janela-acessorio {
-    background-image:url(tela2/janela-acessorios.png);
+    background-image: url(tela2/janela-acessorios.png);
 }
 
 .janela-chapeu {
-    background-image:url(tela2/janela-chapeu.png);
+    background-image: url(tela2/janela-chapeu.png);
 }
+
 .janela-calcado {
-    background-image:url(tela2/janela-calcado.png);
+    background-image: url(tela2/janela-calcado.png);
 }
 
 .btn-voltar {
@@ -130,20 +130,18 @@
     background-position: center left; */
     cursor: pointer;
     width: 100px;
-} 
+}
 
 .btn-salvar {
     /* background-image:url(tela2/salvar.png);
     height: 50px;*/
-    cursor: pointer; 
+    cursor: pointer;
     width: 175px;
 }
 
 .back-save {
     padding-left: 50px !important;
 }
-
-
 
 
 #camisa-on, #calca-on, #chapeu-on, #calcado-on,
@@ -207,11 +205,12 @@
     left: 37px;
     cursor: pointer;
 }
+
 /* #char {
     width: 240px;
 } */
 
-.calca, .camisa, .acessorio, .chapeu, 
+.calca, .camisa, .acessorio, .chapeu,
 .calcado {
     right: 0;
     top: 0;
@@ -219,68 +218,165 @@
 
 
 /* // X-Small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) { 
+@media (max-width: 575.98px) {
 
 }
 
 /* // Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
+@media (max-width: 767.98px) {
 
 }
 
 /* // Medium devices (tablets, less than 992px) */
-@media (max-width: 991.98px) { 
-    /* #exampleModal .modal-body {
-        height: 533px;
-    } */
-}
+@media (max-width: 991.98px) {
+    .calca, .camisa, .acessorio, .chapeu, .calcado {
+        right: 0px;
+        top: 2px;
+        width: 150px;
+    }
 
-/* // Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) { 
+    #calca-box, #camisa-box, #chapeu-box,
+    #acessorios-box, #calcado-box {
+        width: 150px ;
+    }
 
+    .galeria-calcado, .galeria-chapeu {
+        bottom: 190px;
+    }
 
- }
+    .galeria-calcado {
+        right: 100px;
+    }
 
-/* // X-Large devices (large desktops, less than 1400px) */
-@media (max-width: 1399.98px) { 
+    .galeria-chapeu {
+        left: 70px;
+    }
 
+    .galeria-acessorio, .galeria-calca,
+    .galeria-camisa {
+        bottom: 340px;
+    }
 
- }
+    .galeria-calca {
+        padding-left: 0px;
+    }
+    .galeria-acessorio {
+        right: 20px;
+    }
 
-/* // X-Small devices (portrait phones, less than 576px) */
-@media (min-width: 575.98px) { 
+    .galeria-camisa {
+        left: 6px;
+    }
 
-}
+    .seta-esquerda, .seta-direita {
+        bottom: 70px;
+    }
 
-/* // Small devices (landscape phones, less than 768px) */
-@media (min-width: 767.98px) { 
+    .seta-direita {
+        right: 1px !important;
+    }
 
-}
+    .seta-direita.seta-calcado,
+    .seta-direita.seta-chapeu {
+        bottom: 12px !important;
+        right: -4px !important;
+    }
 
-/* // Medium devices (tablets, less than 992px) */
-@media (min-width: 991.98px) { 
-    /* #exampleModal .modal-body {
-        height: 533px;
-    } */
+    .seta-esquerda.seta-calcado,
+    .seta-esquerda.seta-chapeu {
+        bottom: 12px !important;
+    }
 
-    .title-image {
-        background-size: auto;
+    .main-char-area {
+        top: 140px;
+    }
+
+    .col-lg-8 .btn-voltar {
+        display: none;
+    }
+
+    .back-save {
+        bottom: 570px !important;
+    }
+
+    #tela02 .title-image {
+        margin-top: 30px !important;
     }
 }
 
 /* // Large devices (desktops, less than 1200px) */
-@media (min-width: 1199.98px) { 
+@media (max-width: 1199.98px) {
+
+
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+
+}
+
+/* // X-Small devices (portrait phones, less than 576px) */
+@media (min-width: 575.98px) {
+
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+    /* #exampleModal .modal-body {
+        height: 533px;
+    } */
+    .title-image {
+        background-size: auto;
+    }
+
+    .calca, .camisa, .acessorio,
+    .chapeu, .calcado {
+        right: 4px;
+        top: 2px;
+        width: 160px;
+    }
+
+    #calca-box, #camisa-box, #chapeu-box,
+    #acessorios-box, #calcado-box {
+        width: 170px;
+
+    }
+
+    .galeria-calcado {
+        margin-left: 10px;
+    }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {
     /* #exampleModal .modal-body {
         height: 760px;
     } */
- }
+
+    #calca-box, #camisa-box, #acessorios-box,
+    #chapeu-box, #calcado-box {
+        width: 190px;
+        cursor: pointer;
+    }
+    .calca, .camisa, .acessorio, .chapeu,
+    .calcado {
+        right: 0;
+        top: 0;
+        width: auto;
+    }
+
+}
 
 /* // X-Large devices (large desktops, less than 1400px) */
-@media (min-width: 1399.98px) { 
+@media (min-width: 1399.98px) {
 
 
- }
-
+}
 
 
 /* #gamebackground {

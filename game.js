@@ -54,6 +54,9 @@ $('#escolhe-char').click(function () {
     $("#char").attr("src", "tela2/principal/" + char_escolhido);
     $('#tela01').hide();
     $('#tela02').show();
+    if (window.innerWidth < 991.98) {
+        $('#exampleModal .modal-body').css('height', 1300)
+    }
 });
 
 $('.select').click(function () {
