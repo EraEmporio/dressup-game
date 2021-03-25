@@ -13,6 +13,12 @@ $('.arrow').click(function () {
     $(".main-character").css("background-image", "url(" + "tela1/galeria/" + images[i] + ")");
 
 });
+
+$('.btn-voltar').click(function () {
+    $('#tela02').hide();
+    $('#tela01').show();
+})
+
 let j = {
     'camisa': 0,
     'calca': 0,
