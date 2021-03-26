@@ -88,7 +88,7 @@
     background-position: center;
     cursor: pointer;
     height: 50px;
-    width: 100%;
+    width: 80%;
 }
 
 .arrow-col {
@@ -130,6 +130,7 @@
     background-position: center left; */
     cursor: pointer;
     width: 100px;
+    padding-left: 10px;
 }
 
 .btn-salvar {
@@ -253,39 +254,67 @@
 .calcado {
     right: 0;
     top: 0;
+    display: none;
 }
 
 
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+
+    #camisa-on, #calca-on, #chapeu-on, #calcado-on,
+    #acessorio-on, #char {
+        width: 250px;
+    }
+
+    #tela02 .title-image {
+        padding: 0px;
+        width: 300px;
+        margin-top: 0px !important;
+    }
+    
+    .galeria-acessorio, .galeria-calca, .galeria-camisa {
+        top: 240px !important;
+        left: 5px !important;
+    }
+
+    .main-char-area {
+        top: 120px !important;
+        right: -15px !important;
+    }
+
     .back-save {
         bottom: 665px !important;
     }
 
-    .galeria-acessorio {
-        bottom: 195px !important;
-        left: 8px !important;
-        right: unset !important;
+    /* galeria homem positions */
+    .ghomem-active #calca-on {
+        bottom: -30px;
+        left: 0px;
+        z-index: 1;
     }
 
-    .galeria-calca, .galeria-camisa {
-        bottom: 445px !important;
+    .ghomem-active #camisa-on {
+        left: 0;
+        bottom: -30px;
     }
 
-    .galeria-calca {
-        right: 17px;
+    .ghomem-active #calcado-on {
+        bottom: -38px;
+        left: 0;
+        z-index: 0
     }
 
-    .galeria-calcado {
-        bottom: 308px !important;
-        right: 21px !important;
+    .ghomem-active #chapeu-on {
+        top: -28px;
+        left: 0px;
+
     }
 
-    .galeria-chapeu {
-        bottom: 174px !important;
-        right: 21px !important;
-        left: unset !important;
+    .ghomem-active #acessorio-on {
+        bottom: -30px;
+
     }
+
 }
 
 /* // Small devices (landscape phones, less than 768px) */
@@ -307,32 +336,40 @@
     }
 
     .galeria-calcado, .galeria-chapeu {
-        bottom: 190px;
+        /*bottom: 190px;*/
+        left: 20px;
+        top: 320px;
+        bottom: unset !important;
     }
 
-    .galeria-calcado {
-        right: 100px;
+    .galeria-calcado, .galeria-chapeu, .galeria-calca,
+    .galeria-acessorio {
+        display: none;
     }
 
     .galeria-chapeu {
-        left: 70px;
+        /*left: 70px;*/
     }
 
     .galeria-acessorio, .galeria-calca,
     .galeria-camisa {
-        bottom: 340px;
+        /*bottom: 340px;*/
+        top: 300px;
+        left: 25px;
     }
 
     .galeria-calca {
         padding-left: 0px;
     }
 
+
+
     .galeria-acessorio {
-        right: 20px;
+        /*right: 20px;*/
     }
 
     .galeria-camisa {
-        left: 6px;
+        /*left: 6px;*/
     }
 
     .seta-esquerda, .seta-direita {
@@ -356,15 +393,13 @@
 
     .main-char-area {
         top: 140px;
-    }
-
-    .back-save .col-lg-8 .btn-voltar {
-        display: none;
+        right: 5px;
     }
 
     .back-save {
-        bottom: 570px;
+        display: none !important;
     }
+
 
     #tela02 .title-image {
         margin-top: 30px !important;
@@ -372,14 +407,27 @@
 
     .back-save-mobile {
         position: absolute;
-        /*left: -22px;*/
-        bottom: 100px !important;
+        bottom: 40px !important;
+        left: -12px;
         text-align: center;
     }
 
     .select {
         bottom: 6px;
         left: 30px;
+    }
+
+    .mobile-selector {
+        display: inline-block;
+        width: 150px !important;
+        cursor: pointer;
+        margin-top: 5px !important;
+    }
+
+    .mobile-buttons {
+        position: absolute;
+        bottom: 130px;
+        justify-content: center;
     }
 }
 
@@ -430,7 +478,7 @@
         margin-left: 10px;
     }
 
-    .back-save-mobile {
+    .back-save-mobile, .mobile-buttons {
         display: none !important;
     }
 

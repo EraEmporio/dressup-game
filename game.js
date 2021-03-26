@@ -33,17 +33,39 @@ $('.seta').click(function () {
 
     let objetos = $('.' + galeria + ' .' + box)
     if ($(this).hasClass('seta-esquerda')) {
-        $(objetos[j[box]]).css('z-index', 0)
+        $(objetos[j[box]]).css('display', 'none')
         j[box] -= 1
         if (j[box] < 0) j[box] = objetos.length - 1
-        $(objetos[j[box]]).css('z-index', 1)
+        $(objetos[j[box]]).css('display', 'block')
     } else {
-        $(objetos[j[box]]).css('z-index', 0)
+        $(objetos[j[box]]).css('display', 'none')
         j[box] += 1
         if (j[box] > objetos.length - 1) j[box] = 0
-        $(objetos[j[box]]).css('z-index', 1)
+        $(objetos[j[box]]).css('display', 'block')
     }
 });
+
+$('.mobile-selector').click(function () {
+    let class_list = $(this).attr('class').split(/\s+/),
+        box = class_list[1].split('s-').join(''),
+        galerias = $('.' + galeria)
+
+    for (let l = 0; l < galerias.length; l++) {
+        if ($(galerias[l]).attr('class').includes(box)){
+            $(galerias[l]).css('display', 'block')
+            if(box === 'calca') {
+                $('.galeria-calcado').css('display', 'none')
+            }
+        }
+        else {
+            $(galerias[l]).css('display', 'none')
+            if(box === 'sapato') {
+                $('.galeria-calcado').css('display', 'block')
+            }
+        }
+    }
+});
+
 
 $('#escolhe-char').click(function () {
     let img_tela2 = ['tela02_homem-01.png', 'tela02_homem-02.png',
@@ -65,9 +87,9 @@ $('#escolhe-char').click(function () {
     $('#tela02').show();
     if (window.innerWidth < 991.98) {
         let select = $('.select')
-        let modal_height = 1300
+        let modal_height = 900
         if (window.innerWidth < 576.98) {
-            modal_height = 1400
+            modal_height = 800
         }
         $('#exampleModal .modal-body').css('height', modal_height)
         select.attr("height", 50)
