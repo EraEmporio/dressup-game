@@ -79,7 +79,7 @@
     background-position: center;
     cursor: pointer;
     height: 50px;
-    width: 100%;
+    width: 80%;
 }
 
 
@@ -271,7 +271,7 @@
         width: 300px;
         margin-top: 0px !important;
     }
-    
+
     .galeria-acessorio, .galeria-calca, .galeria-camisa {
         top: 240px !important;
         left: 5px !important;
@@ -315,6 +315,31 @@
 
     }
 
+    .gmulher-active #camisa-on {
+        bottom: -23px;
+    }
+
+    .gmulher-active #calca-on.calca-astro {
+        bottom: -1px !important;
+        left: -1px !important;
+    }
+
+    .gmulher-active #calca-on {
+        bottom: -19px;
+        left: -1px;
+    }
+
+    .gmulher-active #chapeu-on {
+        top: -31px !important;
+    }
+
+    .gmulher-active #calcado-on {
+        bottom: -23px !important;
+    }
+
+    .gmulher-active #acessorio-on {
+        bottom: -22px;
+    }
 }
 
 /* // Small devices (landscape phones, less than 768px) */
