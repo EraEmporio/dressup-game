@@ -9,6 +9,11 @@
           integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+            
+
     <title>Dress Up</title>
 </head>
 <body>
@@ -286,7 +291,7 @@
                             <img class='btn-voltar' src="tela2/voltar.png" alt="">
                         </div>
                         <div class="col-lg-4 text-center">
-                            <img class='btn-salvar' src="tela2/salvar.png" alt="">
+                            <img onclick="salvar()" class='btn-salvar' src="tela2/salvar.png" alt="">
                         </div>
                     </div>
                     <!-- botões de seleção mobile  -->
@@ -315,9 +320,19 @@
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
         crossorigin="anonymous"></script>
 <script src="game.js"></script>
+
+<script src="printarea/jquery-1.10.2.js" type="text/JavaScript" language="javascript"></script>
+<script src="printarea/jquery-ui-1.10.4.custom.js"></script>
+<script src="printarea/jquery.PrintArea.js" type="text/JavaScript" language="javascript"></script>
+
 <script>
 
+ function salvar(){
 
+      var options = { mode : 'popup', popClose : true};
+      $( '.main-char-area' ).printArea(options);
+
+ }
 </script>
 </body>
 </html>
