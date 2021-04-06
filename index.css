@@ -54,6 +54,9 @@
 
 }
 
+.modal-backdrop {
+    background-color: transparent !important;
+}
 
 .main-character {
     background-image: url(tela1/galeria/tela01_homem-01.png);
@@ -258,18 +261,85 @@
 }
 
 
+.mobile-selector {
+    width: 150px !important;
+    z-index: 99999;
+}
+
 /* // X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+
+
+    .btn-escolhe {
+        height: 80px;
+        position: relative;
+        bottom: 35px;
+    }
 
     #camisa-on, #calca-on, #chapeu-on, #calcado-on,
     #acessorio-on, #char {
         width: 250px;
     }
 
+    #calca-box, #camisa-box, #chapeu-box,
+    #acessorios-box, #calcado-box {
+        width: 130px !important;
+    }
+
+    .calca, .camisa, .acessorio,
+    .chapeu, .calcado {
+        right: 5px !important;
+        top: 2px;
+        width: 120px !important;
+    }
+
+    .seta-esquerda, .seta-direita {
+        bottom: 50px !important;
+    }
+
+    .seta-direita {
+        right: -3px !important;
+    }
+
+    .seta-esquerda.seta-calcado, .seta-esquerda.seta-chapeu  {
+        height: 80px;
+        bottom: 20px !important;
+        z-index: 99999;
+    }
+    .seta-direita.seta-calcado, .seta-direita.seta-chapeu {
+        bottom: 20px !important;
+        right: -4px !important;
+        height: 80px;
+        z-index: 99999;
+    }
+
+    .mobile-selector {
+        width: 110px !important;
+        padding: 0 !important;
+    }
+
+    .mobile-buttons {
+       bottom: 95px !important;
+    }
+
+    .galeria-calcado, .galeria-chapeu {
+        left: 2px !important;
+        top: 285px !important;
+        bottom: unset !important;
+    }
+
     #tela02 .title-image {
         padding: 0px;
         width: 300px;
         margin-top: 0px !important;
+    }
+
+    #exampleModal .modal-body {
+        height: 700px;
+    }
+
+    .btn-salvar {
+        width: 140px;
     }
 
     .galeria-acessorio, .galeria-calca, .galeria-camisa {
@@ -299,7 +369,7 @@
     }
 
     .ghomem-active #calcado-on {
-        bottom: -38px;
+        bottom: -32px;
         left: 0;
         z-index: 0
     }
@@ -427,7 +497,7 @@
 
 
     #tela02 .title-image {
-        margin-top: 30px !important;
+        margin-top: 30px;
     }
 
     .back-save-mobile {
@@ -444,7 +514,7 @@
 
     .mobile-selector {
         display: inline-block;
-        width: 150px !important;
+        /*width: 150px;*/
         cursor: pointer;
         margin-top: 5px !important;
     }
@@ -509,6 +579,10 @@
 
     .back-save {
         bottom: 53px;
+    }
+
+    .btn-voltar {
+        margin-left: 50px;
     }
 }
 

@@ -89,7 +89,7 @@ $('#escolhe-char').click(function () {
         let select = $('.select')
         let modal_height = 900
         if (window.innerWidth < 576.98) {
-            modal_height = 800
+            modal_height = 700
         }
         $('#exampleModal .modal-body').css('height', modal_height)
         select.attr("height", 50)
