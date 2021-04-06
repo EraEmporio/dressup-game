@@ -12,6 +12,10 @@
     cursor: pointer; /* Add a pointer on hover */
 }
 
+body{
+    background: transparent !important;
+}
+
 #text {
     position: absolute;
     top: 50%;
@@ -22,6 +26,9 @@
     -ms-transform: translate(-50%, -50%);
 }
 
+#exampleModal{
+    background: transparent !important;
+}
 
 #exampleModal .modal-header {
     border-bottom: none;
