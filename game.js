@@ -15,6 +15,12 @@ $('.arrow').click(function () {
 });
 
 $('.btn-voltar').click(function () {
+
+    let img_selectors = $('.main-char-area > img')
+    for (let l = 0; l < img_selectors.length - 1; l++) {
+        $(img_selectors[l]).attr('src', '')
+    }
+
     $('#tela02').hide();
     $('#tela01').show();
 })
@@ -26,6 +32,7 @@ let j = {
     'acessorio': 0,
     'chapeu': 0
 }
+
 let k = 0
 $('.seta').click(function () {
     let class_list = $(this).attr('class').split(/\s+/),
