@@ -107,22 +107,21 @@ $('#escolhe-char').click(function () {
 $('.select').click(function () {
     let class_list = $(this).closest("div")
         .find('img').attr('class').split(/\s+/)
-
     let box = class_list[2].split('seta-').join(''),
         objetos = $('.' + galeria + ' .' + box)
 
+
     let main_char = $('#' + box + '-on'),
         calcado_on = $('#calcado-on'),
-        camisa = $('#camisas-on'),
+        camisa = $('#camisa-on'),
         source_img = $(objetos[j[box]]).attr('src')
-
     let calca_el = $('#calca-on').attr('src')
-    let sapato_astro = source_img.includes('sapatos-astronauta'),
+    let sapato_astro = source_img.includes('sapato-astronauta'),
         calca_astro = calca_el.includes('calca-astronauta') && galeria === 'galeria-mulher',
-        sapato_bomb = source_img.includes('sapatos-bombeiro') || source_img.includes('sapatos-bombeira'),
+        sapato_bomb = source_img.includes('sapato-bombeiro') || source_img.includes('sapato-bombeira'),
         calca_jard_on = calca_el.includes('calca-jardineiro') || calca_el.includes('calca-jardineira'),
         calca_jard = source_img.includes('calca-jardineiro') || source_img.includes('calca-jardineira')
-
+    
     if (box === 'calcado' && sapato_bomb || sapato_astro) {
         let z_index = 0
         if (!calca_jard_on) z_index = 1

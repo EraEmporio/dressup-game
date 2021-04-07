@@ -242,7 +242,7 @@ body{
 }
 
 .seta-direita {
-    right: 5px;
+    right: 2px;
 }
 
 .select {
@@ -290,14 +290,14 @@ body{
 
     #calca-box, #camisa-box, #chapeu-box,
     #acessorios-box, #calcado-box {
-        width: 130px !important;
+        width: 120px !important;
     }
 
     .calca, .camisa, .acessorio,
     .chapeu, .calcado {
         right: 5px !important;
         top: 2px;
-        width: 120px !important;
+        width: 110px !important;
     }
 
     .seta-esquerda, .seta-direita {
@@ -321,7 +321,7 @@ body{
     }
 
     .mobile-selector {
-        width: 110px !important;
+        width: 100px !important;
         padding: 0 !important;
     }
 
@@ -356,7 +356,7 @@ body{
 
     .main-char-area {
         top: 120px !important;
-        right: -15px !important;
+        right: -25px !important;
     }
 
     .back-save {
@@ -479,7 +479,7 @@ body{
     }
 
     .seta-direita {
-        right: 1px !important;
+        right: 1px;
     }
 
     .seta-direita.seta-calcado,
