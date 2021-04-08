@@ -94,9 +94,9 @@ $('#escolhe-char').click(function () {
     $('#tela02').show();
     if (window.innerWidth < 991.98) {
         let select = $('.select')
-        let modal_height = 900
+        let modal_height = 635
         if (window.innerWidth < 576.98) {
-            modal_height = 700
+            modal_height = 580
         }
         $('#exampleModal .modal-body').css('height', modal_height)
         select.attr("height", 50)
@@ -121,7 +121,7 @@ $('.select').click(function () {
         sapato_bomb = source_img.includes('sapato-bombeiro') || source_img.includes('sapato-bombeira'),
         calca_jard_on = calca_el.includes('calca-jardineiro') || calca_el.includes('calca-jardineira'),
         calca_jard = source_img.includes('calca-jardineiro') || source_img.includes('calca-jardineira')
-    
+
     if (box === 'calcado' && sapato_bomb || sapato_astro) {
         let z_index = 0
         if (!calca_jard_on) z_index = 1
