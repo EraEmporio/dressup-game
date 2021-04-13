@@ -15,6 +15,12 @@ $('.arrow').click(function () {
 });
 
 $('.btn-voltar').click(function () {
+
+    let img_selectors = $('.main-char-area > img')
+    for (let l = 0; l < img_selectors.length - 1; l++) {
+        $(img_selectors[l]).attr('src', '')
+    }
+
     $('#tela02').hide();
     $('#tela01').show();
 })
@@ -26,6 +32,7 @@ let j = {
     'acessorio': 0,
     'chapeu': 0
 }
+
 let k = 0
 $('.seta').click(function () {
     let class_list = $(this).attr('class').split(/\s+/),
@@ -87,9 +94,9 @@ $('#escolhe-char').click(function () {
     $('#tela02').show();
     if (window.innerWidth < 991.98) {
         let select = $('.select')
-        let modal_height = 900
+        let modal_height = 635
         if (window.innerWidth < 576.98) {
-            modal_height = 700
+            modal_height = 580
         }
         $('#exampleModal .modal-body').css('height', modal_height)
         select.attr("height", 50)
@@ -100,19 +107,18 @@ $('#escolhe-char').click(function () {
 $('.select').click(function () {
     let class_list = $(this).closest("div")
         .find('img').attr('class').split(/\s+/)
-
     let box = class_list[2].split('seta-').join(''),
         objetos = $('.' + galeria + ' .' + box)
 
+
     let main_char = $('#' + box + '-on'),
         calcado_on = $('#calcado-on'),
-        camisa = $('#camisas-on'),
+        camisa = $('#camisa-on'),
         source_img = $(objetos[j[box]]).attr('src')
-
     let calca_el = $('#calca-on').attr('src')
-    let sapato_astro = source_img.includes('sapatos-astronauta'),
+    let sapato_astro = source_img.includes('sapato-astronauta'),
         calca_astro = calca_el.includes('calca-astronauta') && galeria === 'galeria-mulher',
-        sapato_bomb = source_img.includes('sapatos-bombeiro') || source_img.includes('sapatos-bombeira'),
+        sapato_bomb = source_img.includes('sapato-bombeiro') || source_img.includes('sapato-bombeira'),
         calca_jard_on = calca_el.includes('calca-jardineiro') || calca_el.includes('calca-jardineira'),
         calca_jard = source_img.includes('calca-jardineiro') || source_img.includes('calca-jardineira')
 
