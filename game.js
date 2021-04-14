@@ -89,6 +89,8 @@ $('#escolhe-char').click(function () {
         $('.galeria-homem').addClass('d-none')
     } else {
         $('.main-char-area').addClass('ghomem-active')
+        $('.galeria-homem').removeClass('d-none')
+        $('.galeria-mulher').addClass('d-none')
     }
 
     $('#tela02').show();
@@ -102,6 +104,7 @@ $('#escolhe-char').click(function () {
         select.attr("height", 50)
         select.attr("width", 120)
     }
+    console.log(galeria)
 });
 
 $('.select').click(function () {
